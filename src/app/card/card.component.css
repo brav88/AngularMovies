@@ -1,0 +1,20 @@
+.example-card {
+    max-width: 250px;
+}
+
+.example-card.Thriller {
+    background-color: lightgrey;
+}
+
+.example-card.Drama {
+    background-color: lightcyan;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+
+.img {
+    height: 100px;    
+    width: 100px;    
+}

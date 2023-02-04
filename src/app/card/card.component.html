@@ -1,0 +1,16 @@
+<mat-card class="example-card mt-3" [ngClass]="cardClasses()">
+    <mat-card-header>
+        <mat-card-title>{{ movie.Title }}</mat-card-title>
+        <mat-card-subtitle>{{ movie.Released }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ movie.Poster }}" *ngIf="isImageAvailable(); else noImage">
+    <ng-template #noImage>
+        <p>No image available</p>
+    </ng-template>
+    <mat-card-content>
+        <div>{{movie.Category}}</div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)="onCardClicked()" class="btn btn-primary">View Movie</button>
+    </mat-card-actions>
+</mat-card>
